@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2023-12-01T18:22:13 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SLd" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d64414b0-3507-4893-8676-742d0312ee48">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Perfect Adapter"/>
+    <queryString>
+        <![CDATA[	SELECT
+    s.s_id,
+    e.emp_id,
+    s.amount,
+    e.emp_name,
+    s.months,
+    TIME_TO_SEC(TIMEDIFF(e.leave_time, e.in_time)) / 3600 AS working_hours,
+    TIME_TO_SEC(TIMEDIFF(e.leave_time, e.in_time)) / 3600 * 500 AS add_for_hours
+FROM employee e
+JOIN salary s ON e.emp_id = s.emp_id
+]]>
+    </queryString>
+    <field name="s_id" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="emp_id" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="amount" class="java.lang.Double">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="emp_name" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="months" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="working_hours" class="java.math.BigDecimal"/>
+    <field name="add_for_hours" class="java.math.BigDecimal"/>
+    <group name="s_id">
+        <groupExpression><![CDATA[$F{s_id}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="64" splitType="Stretch">
+            <staticText>
+                <reportElement x="170" y="24" width="234" height="30" uuid="57225aa3-0af4-4e2a-90e5-a0bc3ec992ed"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="24" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Salary Details]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="63" splitType="Stretch">
+            <staticText>
+                <reportElement x="209" y="-6" width="163" height="30" uuid="ee564013-018f-47d1-b8d1-50bba07b84c5"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Perfect Leather]]></text>
+            </staticText>
+            <line>
+                <reportElement x="5" y="43" width="552" height="1" uuid="306a2721-bdd3-4b3d-9a90-5211b6c471dc"/>
+                <graphicElement>
+                    <pen lineWidth="3.0"/>
+                </graphicElement>
+            </line>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="39" splitType="Stretch">
+            <staticText>
+                <reportElement x="-21" y="0" width="100" height="30" uuid="d11a6caf-d99b-46d9-aea3-71e53ed5c6df"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[s_id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="58" y="0" width="100" height="30" uuid="fa1ff061-1e77-4adf-a801-f981e42d7e26"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[emp_id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="164" y="0" width="100" height="30" uuid="12c42eea-3e17-4308-946e-5b990b6ab63b"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[emp_name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="253" y="0" width="100" height="30" uuid="f5c594bc-825d-4ae0-9a14-38bc6fa59b43"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Basic]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="351" y="0" width="100" height="30" uuid="c471748a-af06-4c9a-b8fe-5a9fdd7d8cc3"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[working_hours]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="452" y="0" width="100" height="30" uuid="2b8841ed-f0ca-4fb3-83e5-1ae6f3ce6ef0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[add_for_hours]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="81" splitType="Stretch">
+            <textField>
+                <reportElement positionType="FixRelativeToBottom" x="20" y="8" width="100" height="22" uuid="26cb6dd0-ab96-435f-aa5e-95717b1f71d8"/>
+                <textFieldExpression><![CDATA[$F{s_id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="92" y="9" width="100" height="20" uuid="fe05dfbe-c98e-4423-bc38-b5aadc2c1101"/>
+                <textFieldExpression><![CDATA[$F{emp_id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="189" y="8" width="100" height="22" uuid="26426cb9-58e8-42cc-b4a6-640f41d24658"/>
+                <textFieldExpression><![CDATA[$F{emp_name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="279" y="9" width="100" height="14" uuid="a355eeec-e96f-4e4a-9e57-fecc6ed21ede"/>
+                <textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="366" y="9" width="100" height="19" uuid="2d523a1f-e377-4868-ba10-5be7f97d39c2"/>
+                <textFieldExpression><![CDATA[$F{working_hours}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="468" y="7" width="100" height="30" uuid="4a29bfb9-f1ce-43b5-89dd-1fedfc234aed"/>
+                <textFieldExpression><![CDATA[$F{add_for_hours}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="60">
+            <staticText>
+                <reportElement x="177" y="30" width="201" height="30" uuid="174e7e44-3de8-4b16-bf19-03721c15ec02"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <text><![CDATA[contact  :0775296346]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="44" splitType="Stretch"/>
+    </summary>
+</jasperReport>

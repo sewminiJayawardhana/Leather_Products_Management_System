@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="667.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Shop.controller.OrdersFormController">
+   <children>
+      <ImageView fitHeight="667.0" fitWidth="1000.0" opacity="0.84" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/delivery.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane layoutX="104.0" layoutY="77.0" opacity="0.89" prefHeight="200.0" prefWidth="802.0" style="-fx-background-color: #c16e6e;">
+         <effect>
+            <DropShadow radius="20.244999999999997" spread="0.11" width="61.98">
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect></Pane>
+      <Text fill="WHITE" layoutX="378.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Details">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.29" />
+         </effect>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="437.0" layoutY="152.0" onAction="#btnNewOnAction" style="-fx-background-color: #0b8d23;" text="New" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="187.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Id:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="545.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Date:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="174.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="530.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="149.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="312.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="505.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="670.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QtyOnHand:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="816.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <TextField fx:id="txtQty" layoutX="806.0" layoutY="239.0" onAction="#txtQtyOnAction" prefHeight="25.0" prefWidth="79.0" />
+      <TableView fx:id="tblOrderCart" layoutX="108.0" layoutY="352.0" opacity="0.93" prefHeight="232.0" prefWidth="802.0">
+        <columns>
+          <TableColumn fx:id="colProductcode" prefWidth="115.38479614257812" text="Product_code" />
+          <TableColumn fx:id="colDescription" prefWidth="232.30804443359375" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="110.00021362304688" text="Qty" />
+            <TableColumn fx:id="colUnitprice" minWidth="0.0" prefWidth="108.46173095703125" text="UnitPrice" />
+            <TableColumn fx:id="colTotal" prefWidth="106.92327880859375" text="Total" />
+            <TableColumn fx:id="colAction" prefWidth="130.76934814453125" text="Action" />
+        </columns>
+         <effect>
+            <DropShadow radius="15.692500000000003" spread="0.13" width="43.77" />
+         </effect>
+      </TableView>
+      <JFXButton fx:id="btnBack" layoutX="21.0" layoutY="591.0" onAction="#btnBackOnAction" prefHeight="35.0" prefWidth="24.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-rewind-button-round-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbCustomerid" layoutX="271.0" layoutY="150.0" onAction="#cmbCustomerOnAction" prefHeight="25.0" prefWidth="155.0" />
+      <JFXComboBox fx:id="cmbItemCode" layoutX="149.0" layoutY="238.0" onAction="#cmbProductOnAction" prefHeight="25.0" prefWidth="95.0" />
+      <JFXButton buttonType="RAISED" layoutX="810.0" layoutY="290.0" onAction="#btnAddtocartOnAction" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: #e01595;" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="285.0" layoutY="622.0" text="Net Total:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="393.0" layoutY="618.0" prefHeight="32.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="lblOrderDate" layoutX="633.0" layoutY="102.0" prefHeight="25.0" prefWidth="106.0" />
+      <Label fx:id="lblCustomerName" layoutX="654.0" layoutY="154.0" prefHeight="25.0" prefWidth="94.0" />
+      <Label fx:id="lblOrderId" layoutX="265.0" layoutY="106.0" prefHeight="25.0" prefWidth="95.0" />
+      <Label fx:id="lblUnitPrice" layoutX="491.0" layoutY="236.0" prefHeight="25.0" prefWidth="114.0" />
+      <Label fx:id="lblQtyOnHand" layoutX="676.0" layoutY="239.0" prefHeight="25.0" prefWidth="79.0" />
+      <Label fx:id="lblDescription" layoutX="309.0" layoutY="234.0" prefHeight="25.0" prefWidth="95.0" />
+      <JFXButton fx:id="btnPlaceorder" buttonType="RAISED" layoutX="638.0" layoutY="601.0" onAction="#btnPlaceorderOnAction" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: blue;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPrint" buttonType="RAISED" layoutX="806.0" layoutY="601.0" onAction="#btnPrintOnAction" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: gray;" text="Print Sales Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="106.0" fitWidth="148.0" layoutX="851.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/perfectLOGO2.png" />
+         </image>
+         <effect>
+            <DropShadow radius="17.97" spread="0.38" width="52.88">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label fx:id="time" layoutX="100.0" layoutY="35.0" prefHeight="38.0" prefWidth="180.0" text="." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="date" layoutX="100.0" layoutY="10.0" prefHeight="25.0" prefWidth="149.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

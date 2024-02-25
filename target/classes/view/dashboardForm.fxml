@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpaneD" prefHeight="667.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Shop.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="667.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Dashsh.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="time" layoutX="674.0" layoutY="86.0" prefHeight="22.0" prefWidth="137.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="914.0" layoutY="15.0" onAction="#btnLogoutOnAction" prefHeight="55.0" prefWidth="55.0" text="." textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logouIcon.png" />
+               </image>
+               <effect>
+                  <Glow level="0.58" />
+               </effect>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow level="0.65" />
+         </effect>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-12.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/perfectLOGO2.png" />
+         </image>
+         <effect>
+            <DropShadow radius="8.2925" spread="0.29" width="14.17">
+               <color>
+                  <Color red="0.036437395960092545" green="0.03438713774085045" blue="0.03438713774085045" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="117.0" fitWidth="122.0" layoutX="427.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-logistics-32.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="109.0" fitWidth="117.0" layoutX="197.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-product-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnProducts" alignment="BOTTOM_CENTER" layoutX="172.0" layoutY="374.0" onAction="#btnProductsOnAction" prefHeight="174.0" prefWidth="150.0" style="-fx-background-radius: 50;" text="Products">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="143.0" fitWidth="125.0" layoutX="187.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-test-account-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnCustomer" alignment="BOTTOM_CENTER" layoutX="174.0" layoutY="145.0" onAction="#btnCustomerOnAction" prefHeight="175.0" prefWidth="150.0" style="-fx-background-radius: 50;" text="Customer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="125.0" fitWidth="117.0" layoutX="426.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-businessman-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSupplier" alignment="BOTTOM_CENTER" layoutX="410.0" layoutY="147.0" onAction="#btnSupplierOnAction" prefHeight="173.0" prefWidth="150.0" style="-fx-background-radius: 50;" text="Supplier">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="117.0" fitWidth="117.0" layoutX="662.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-edit-profile-64%20(1).png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnEmployee" alignment="BOTTOM_CENTER" layoutX="644.0" layoutY="146.0" onAction="#btnEmployeeOnAction" prefHeight="175.0" prefWidth="150.0" style="-fx-background-radius: 50;" text="Employee">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="148.0" fitWidth="122.0" layoutX="663.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-delivery-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_CENTER" layoutX="648.0" layoutY="374.0" onAction="#btnDeliveryOnAction" prefHeight="173.0" prefWidth="150.0" style="-fx-background-radius: 50;" text="Delivery">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="399.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.34" />
+         </effect>
+      </Text>
+      <JFXButton fx:id="btnOrders" alignment="BOTTOM_CENTER" layoutX="409.0" layoutY="374.0" onAction="#btnOrdersOnAction" prefHeight="173.0" prefWidth="150.0" style="-fx-background-radius: 50;" text="Orders">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

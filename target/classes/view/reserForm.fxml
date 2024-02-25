@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="667.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Shop.controller.ResetFormController">
+   <children>
+      <TextField fx:id="usertxt" layoutX="430.0" layoutY="126.0" onKeyPressed="#usPressed" onKeyTyped="#unmTyped" promptText="Username" styleClass="TextField" />
+      <TextField fx:id="pastxt" layoutX="447.0" layoutY="201.0" onKeyPressed="#usPressed" onKeyTyped="#unmTyped" promptText="password" styleClass="TextField" />
+      <TextField fx:id="conpastxt" layoutX="424.0" layoutY="286.0" onKeyPressed="#usPressed" onKeyTyped="#unmTyped" promptText="Confirm password" styleClass="TextField" />
+      <JFXButton fx:id="sbtn" layoutX="469.0" layoutY="402.0" prefHeight="55.0" prefWidth="165.0" style="-fx-background-color: blue; -fx-background-radius: 50;" text="save" textFill="WHITE" />
+   </children>
+</AnchorPane>

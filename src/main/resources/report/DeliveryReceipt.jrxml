@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2023-12-01T20:41:02 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DeliveryReceipt" pageWidth="297" pageHeight="421" columnWidth="257" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3c07d781-d6c6-4e23-8660-bb7af5d77f78">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+    <queryString>
+        <![CDATA[select *from delivery where delivery_id="D001"]]>
+    </queryString>
+    <field name="delivery_id" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="order_id" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="emp_id" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="location" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="delivery_status" class="java.lang.String">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="tel" class="java.lang.Integer">
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <group name="delivery_id">
+        <groupExpression><![CDATA[$F{delivery_id}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="86" splitType="Stretch">
+            <staticText>
+                <reportElement x="12" y="19" width="234" height="30" uuid="3a67b3a3-3af5-42a6-9716-8576b9ae683f"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="24" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Delivery Receipt]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="45" y="52" width="163" height="20" uuid="5ca7a0b0-13f7-46a9-9b31-4bf02e22ebfd"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Perfect Leather]]></text>
+            </staticText>
+            <line>
+                <reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="76" width="257" height="1" uuid="8df62631-63d6-4c8c-8dd5-e4d337a402b4">
+                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineWidth="3.0"/>
+                </graphicElement>
+            </line>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch">
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="211" splitType="Stretch">
+            <textField>
+                <reportElement x="157" y="11" width="100" height="30" uuid="463481f8-6e21-4141-888b-3a6ebe249fb0"/>
+                <textFieldExpression><![CDATA[$F{delivery_id}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="55" y="11" width="100" height="30" uuid="7cfd7c0b-be9d-4c7f-8b0e-062c0b9f8b46"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[delivery_id]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="156" y="41" width="100" height="30" uuid="6bf82155-8e45-4fd9-8de4-614411e344e6"/>
+                <textFieldExpression><![CDATA[$F{order_id}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="55" y="41" width="100" height="30" uuid="c54aebb4-64f9-41f7-82b0-90d9b964ccc8"/>
+                <textElement>
+                    <font isBold="true" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[order_id]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="156" y="72" width="100" height="30" uuid="28566f51-2f52-470f-aec2-afab549649ff"/>
+                <textFieldExpression><![CDATA[$F{emp_id}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="55" y="70" width="100" height="30" uuid="eafbfa34-9210-4aa5-8ebf-7d041fe1ef4a"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[emp_id]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="156" y="100" width="100" height="30" uuid="4458112e-8012-4792-91df-0d53d4d864b5"/>
+                <textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="55" y="100" width="100" height="30" uuid="1e16fedf-0641-486a-8889-5db8c0cb1e84"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[location]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="157" y="130" width="100" height="30" uuid="77227576-8ec0-45b5-999c-51ab06066b97"/>
+                <textFieldExpression><![CDATA[$F{delivery_status}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="54" y="130" width="100" height="30" uuid="13076eed-4f6c-42bc-97e9-fcc64feec4b6"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[delivery_status]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="157" y="160" width="100" height="30" uuid="cf76f8e3-4942-48fe-83e6-69e43c164d90"/>
+                <textFieldExpression><![CDATA[$F{tel}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="54" y="160" width="100" height="30" uuid="67944a50-b00f-40d3-a124-8c6728865d47"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[tel]]></text>
+            </staticText>
+            <line>
+                <reportElement x="14" y="210" width="232" height="1" uuid="1abce731-0e68-48f5-b9bd-8c64900692af"/>
+                <graphicElement>
+                    <pen lineWidth="3.0"/>
+                </graphicElement>
+            </line>
+        </band>
+    </detail>
+    <columnFooter>
+        <band splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="48" splitType="Stretch">
+            <staticText>
+                <reportElement x="50" y="3" width="146" height="30" uuid="2801ae3d-4733-4239-a365-354bb257c06e"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Thank You !!]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+</jasperReport>

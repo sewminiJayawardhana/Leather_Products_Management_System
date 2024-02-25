@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="667.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Shop.controller.LoginFormController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="667.0" prefWidth="1000.0" style="-fx-background-image:/home/sewmini/Downloads/pexels-francesco-ungaro-998641.jpg;">
+         <children>
+            <ImageView fitHeight="667.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/NoLOGO.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="97.0" layoutX="207.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-lock-94.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUsername" layoutX="94.0" layoutY="258.0" prefHeight="35.0" prefWidth="299.0" />
+            <Text fill="#4a1515" layoutX="92.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="txtPassword" layoutX="92.0" layoutY="354.0" prefHeight="35.0" prefWidth="301.0" />
+            <Text fill="#4a1515" layoutX="88.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="66.0" layoutY="459.0" onAction="#btnLoginOnAction" prefHeight="53.0" prefWidth="345.0" style="-fx-background-color: brown;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow height="0.0" radius="0.0" width="0.0">
+                     <color>
+                        <Color red="0.019999999552965164" green="0.019551394507288933" blue="0.01940000057220459" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Hyperlink layoutX="259.0" layoutY="554.0" onAction="#hperlinkRegisterOnAction" text="Register" textFill="#185ae0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Hyperlink>
+            <Text layoutX="91.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account ?" />
+            <Text fill="#662121" layoutX="155.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="264.0" fitWidth="378.0" layoutX="587.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/perfectLOGO2.png" />
+               </image>
+               <effect>
+                  <DropShadow radius="17.97" spread="0.57" width="52.88">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Hyperlink layoutX="143.0" layoutY="413.0" onAction="#hyperlinkForgotOnAction" text="Forgot password ?" textFill="#800000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

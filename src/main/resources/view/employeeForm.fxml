@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="667.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Shop.controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="667.0" fitWidth="1000.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/employyes.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="64.0" layoutY="101.0" opacity="0.96" prefHeight="332.0" prefWidth="310.0" style="-fx-background-color: #c16e6e;">
+         <effect>
+            <Glow level="0.15">
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect></Pane>
+      <Text fill="WHITE" layoutX="321.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Details">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow radius="9.43" spread="0.3" width="18.72">
+               <color>
+                  <Color red="0.11740901321172714" green="0.11665637046098709" blue="0.11665637046098709" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <TableView fx:id="tblEmployee" layoutX="435.0" layoutY="77.0" opacity="0.92" prefHeight="500.0" prefWidth="510.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="119.23095321655273" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="125.38482666015625" text="Name" />
+            <TableColumn fx:id="colIntime" prefWidth="137.6925048828125" text="InTime" />
+            <TableColumn fx:id="colLeavetime" prefWidth="123.84634399414062" text="LeaveTime" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnBack" layoutX="13.0" layoutY="594.0" onAction="#btnBackOnAction" prefHeight="35.0" prefWidth="24.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="107.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-rewind-button-round-64.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="96.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Time" />
+      <Text fill="WHITE" layoutX="97.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leave Time" />
+      <Text fill="WHITE" layoutX="90.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Id" />
+      <Text fill="WHITE" layoutX="90.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Name" />
+      <TextField fx:id="txtEmployeeid" layoutX="91.0" layoutY="142.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="txtEmployeename" layoutX="91.0" layoutY="227.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="txtIntime" layoutX="92.0" layoutY="303.0" prefHeight="25.0" prefWidth="251.0" />
+      <TextField fx:id="txtLeavetime" layoutX="93.0" layoutY="383.0" prefHeight="25.0" prefWidth="252.0" />
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="80.0" layoutY="464.0" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: orange;" text="Clear" textAlignment="RIGHT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/clearIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow height="26.69" radius="16.545" spread="0.27" width="41.49" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="241.0" layoutY="465.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: blue;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/saveIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow height="0.0" radius="12.7175" spread="0.08" width="52.87">
+               <color>
+                  <Color opacity="0.009999999776482582" />
+               </color>
+            </DropShadow>
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="79.0" layoutY="534.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: #992ac6;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/updateIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow radius="19.1075" spread="0.09" width="57.43" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="245.0" layoutY="533.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="134.0" style="-fx-background-color: Red;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/deleteIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow radius="17.4" spread="0.14" width="50.6" />
+         </effect>
+      </JFXButton>
+      <ImageView fitHeight="112.0" fitWidth="176.0" layoutX="-24.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/perfectLOGO2.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="btnSalary" buttonType="RAISED" layoutX="796.0" layoutY="599.0" onAction="#btnSalaryOnAction" prefHeight="51.0" prefWidth="135.0" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="Salary" textFill="#524949">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow radius="17.4" spread="0.14" width="50.6" />
+         </effect>
+      </JFXButton>
+      <Label fx:id="date" layoutX="778.0" layoutY="40.0" prefHeight="28.0" prefWidth="189.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="time" layoutX="776.0" layoutY="5.0" prefHeight="31.0" prefWidth="180.0" text="." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
